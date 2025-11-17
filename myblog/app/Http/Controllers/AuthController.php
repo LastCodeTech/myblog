@@ -19,5 +19,13 @@ class AuthController extends Controller
         ]);
         $user=User::create($validate);
         Auth::login($user);
+        return redirect()->route('home');
+    }
+
+    //logout
+    public function logout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        return redirect()->route('register');
     }
 }
