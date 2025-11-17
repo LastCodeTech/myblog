@@ -13,15 +13,18 @@
                 </div>
                 <div class="flex items-center">
                     @guest  
-                    <form action="{{route('logout')}}" method="POST">
-                        @csrf
-                        <button class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">logout</button>
-                    </form>
+                    <a href="{{route('login')}}" class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        login
+                    </a>
                     <a href="{{route('register')}}" class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                         register
                     </a>
                     @endguest
                     @auth 
+                     <form action="{{route('logout')}}" method="POST">
+                        @csrf
+                        <button class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">logout</button>
+                    </form>
                     <a href="create-blog-post.html" class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                         <i class="fas fa-plus mr-2"></i> New Post
                     </a>

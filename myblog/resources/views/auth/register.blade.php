@@ -53,7 +53,7 @@
             <div class="text-center">
                 <p class="text-sm text-gray-600">
                     Already have an account? 
-                    <a href="login.html" class="font-medium text-red-600 hover:text-red-500">Sign in</a>
+                    <a href="{{route('login')}}" class="font-medium text-red-600 hover:text-red-500">Sign in</a>
                 </p>
             </div>
         </form>
