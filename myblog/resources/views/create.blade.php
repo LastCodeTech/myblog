@@ -30,11 +30,10 @@
                                     <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
                                     <select id="category" name="category" 
                                         class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm">
-                                        <option>Technology</option>
-                                        <option>Design</option>
-                                        <option>Development</option>
-                                        <option>Business</option>
-                                        <option>Lifestyle</option>
+                                        <option>choose option</option>
+                                       @foreach ($category as $categories)
+                                           <option>{{$categories->name}}</option>
+                                       @endforeach
                                     </select>
                                 </div>
 
