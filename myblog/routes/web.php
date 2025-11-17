@@ -9,4 +9,5 @@ Route::get('/home',[MyblogController::class,'home'])->name('home');
 Route::post('/logout',[AuthController::class,'logout'])->name('logout');
 Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/login',[AuthController::class,'loginProcess'])->name('login.process');
+Route::get('/create',[MyblogController::class,'create'])->name('create');
 
